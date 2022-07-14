@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% block content %}
+    <p>For looping</p>
+
+    <ul>
+        {% for letters in mylist %}
+            <li>{{letters}}</li>    
+        {% endfor %}
+
+    </ul>
+    <p>Here we can use a if condition</p>
+
+    {% if name == 'xsmax' %}
+        <h1>Basic variable insert {{name}}</h1>
+
+        <h2>Name of the phone is {{name}}</h2>
+        <h2>Name of the phone is {{name.upper()}}</h2>
+        <h2>Name of the phone is {{name | upper}}</h2>
+        <h2>Name of the phone is {{name | capitalize}}</h2>
+
+        <h3>Phone name contains these letters {{mylist}}</h3>
+        <h3>It's first letter is  {{mylist[0]}}</h3>
+        <h4>{{mydict}}</h4>
+        <h5>{{name}} is the product of {{mydict['brand']}}</h5>
+    {% else %}
+        <p>phone name is not xsmax</p>
+    {% endif %}
+    <hr>
+
+    <h1>Basic variable insert {{name}}</h1>
+
+    <h2>Name of the phone is {{name}}</h2>
+    <h2>Name of the phone is {{name.upper()}}</h2>
+    <h2>Name of the phone is {{name | upper}}</h2>
+    <h2>Name of the phone is {{name | capitalize}}</h2>
+
+    <h3>Phone name contains these letters {{mylist}}</h3>
+    <h3>It's first letter is  {{mylist[0]}}</h3>
+    <h4>{{mydict}}</h4>
+    <h5>{{name}} is the product of {{mydict['brand']}}</h5>
+    {% endblock content %}
+    
+   
+</body>
+</html>

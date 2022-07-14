@@ -1,0 +1,34 @@
+{% extends 'form_base.html' %}
+
+{% block content %}
+    
+    <div class="jumbotron">
+        <h1>Welcome to the signup page</h1>
+        <h2>We are excited for our new member</h2>
+        <h3>Before that please fake a minn and fill up the form</h3>
+        <br><hr>
+
+        <form action="{{ url_for('work_thankyou') }}">
+
+            <div class="form-group  col-md-6">
+                <label for="user_name">User Name : </label>
+                <input type="text" class="form-control" name="user_name" placeholder="Enter User Name">
+            </div>
+            
+            <div class="form-group col-md-6">
+                <label for="password">Password</label>
+                <input type="password" class="form-control"  placeholder="Password" name="password">
+            </div>
+            
+            <div class="form-group col-md-6">
+                <label for="confirm_password">Re Enter Password</label>
+                <input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password">
+            </div>
+            
+           
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+        
+    </div>
+
+{% endblock content %}
